@@ -32,8 +32,8 @@ export class FormController {
    */
   @Post()
   @ApiOperation({
-    summary: "Create a dynamic form with name and fields",
-    description: "Create a dynamic form with name and fields with information such as name, type of field and required "
+    summary: ControllerRoute.ACTIONS.CREATE_TEMPLATE_SUMMARY,
+    description: ControllerRoute.ACTIONS.CREATE_TEMPLATE_DESCRIPTION
   })
   @ApiBody({
     description: 'Provide name of the dynamic form, fields array with name, type and required values for each field',
@@ -51,8 +51,8 @@ export class FormController {
    */
   @Get('/:id')
   @ApiOperation({
-    summary: "Retrieve a form template by id",
-    description: "Retrieve form template matching with form template id"
+    summary: ControllerRoute.ACTIONS.GET_TEMPLATE_BY_ID_SUMMARY,
+    description: ControllerRoute.ACTIONS.GET_TEMPLATE_BY_ID_DESCRIPTION
   })
   getFormTemplate(@Param() params: GetFormTemplateDto) {
     return this.formService.getFormTemplate(params.id);
@@ -67,8 +67,8 @@ export class FormController {
    */
   @Post('/:id/submit')
   @ApiOperation({
-    summary: "Submit data to the dynamic template by id",
-    description: "Submit data to the dynamic form based on the fields of the template"
+    summary: ControllerRoute.ACTIONS.SUBMIT_FORM_DATA_SUMMARY,
+    description: ControllerRoute.ACTIONS.SUBMIT_FORM_DATA_DESCRIPTION
   })
   @ApiBody({
     description: 'Provide name and value for the fields detailed in respective template ',
