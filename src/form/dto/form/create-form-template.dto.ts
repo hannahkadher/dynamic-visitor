@@ -1,4 +1,4 @@
-import { IsString, IsArray, ArrayMinSize, IsNotEmpty } from 'class-validator';
+import { IsString, IsArray, ArrayMinSize, IsNotEmpty, MinLength } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 /**
@@ -11,6 +11,9 @@ export class CreateFormTemplateDto {
    */
   @IsString()
   @IsNotEmpty()
+  @MinLength(3, {
+    message: 'Name should be at least 3 characters long',
+  })
   @ApiProperty({
     name: 'name',
     required: true,

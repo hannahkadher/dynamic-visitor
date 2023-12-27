@@ -8,6 +8,9 @@ export class FormData extends Document {
 
   @Prop({ required: true, type: Object })
   formData: Record<string, any>;
+
+  @Prop({ default: Date.now }) 
+  submittedAt: Date;
 }
 
 export const FormDataSchema = SchemaFactory.createForClass(FormData);
