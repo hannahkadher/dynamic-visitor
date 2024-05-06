@@ -23,8 +23,8 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A backend API in Node.js to support dynamic creation and management of visitor forms. It allow different form fields to be defined and customized according to the visitor type.
+It has endpoint to define and manage visitor forms. Also include endpoints forretrieving and submitting these dynamic forms. The database schema has entities to store form information and flexible to accommodate various field types. Developed using 
 
 ## Installation
 
